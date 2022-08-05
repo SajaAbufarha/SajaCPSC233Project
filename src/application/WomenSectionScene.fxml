@@ -1,17 +1,230 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.collections.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.shape.*?>
 <?import javafx.scene.control.*?>
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.collections.FXCollections?>
 
-
-<VBox prefHeight="650.0" prefWidth="1000.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="application.OnlineShopController">
+<VBox fillWidth="false" prefHeight="650.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.OnlineShopController">
    <children>
-      <HBox prefHeight="100.0" prefWidth="200.0">
+      <Label prefHeight="27.0" prefWidth="315.0" text="Men's Collection">
+         <VBox.margin>
+            <Insets left="325.0" />
+         </VBox.margin>
+      </Label>
+      <HBox layoutX="10.0" layoutY="292.0" prefHeight="127.0" prefWidth="531.0">
          <children>
-            <Button mnemonicParsing="false" onAction="#switchToMainScene" text="Back to main window" />
+            <Label text="Will add pics">
+               <HBox.margin>
+                  <Insets top="30.0" />
+               </HBox.margin>
+            </Label>
+         </children>
+         <VBox.margin>
+            <Insets top="50.0" />
+         </VBox.margin>
+      </HBox>
+      <HBox prefHeight="34.0" prefWidth="957.0">
+         <children>
+            <HBox prefHeight="100.0" prefWidth="200.0" />
+            <Label prefHeight="27.0" prefWidth="248.0" text="Stella Wide Leg Trousers" />
+            <Label layoutX="10.0" layoutY="10.0" prefHeight="27.0" prefWidth="224.0" text="Stella Wrap Waist Top" />
+            <Label layoutX="52.0" layoutY="10.0" prefHeight="27.0" prefWidth="286.0" text="Geo Printed High Rise Trousers" />
+         </children></HBox>
+      <HBox prefHeight="32.0" prefWidth="957.0">
+         <children>
+            <Label fx:id="pantsPrice" prefHeight="27.0" prefWidth="244.0" text="78.00 $">
+               <HBox.margin>
+                  <Insets left="200.0" />
+               </HBox.margin>
+            </Label>
+            <Label fx:id="topPrice" prefHeight="27.0" prefWidth="244.0" text="91.00 $" />
+            <Label fx:id="geoPantsPrice" prefHeight="27.0" prefWidth="244.0" text="112.00 $" />
          </children>
       </HBox>
+      <HBox prefHeight="54.0" prefWidth="826.0">
+         <children>
+            <HBox prefHeight="100.0" prefWidth="201.0">
+               <children>
+                  <Label prefHeight="27.0" prefWidth="252.0" text="Choose A Size" />
+               </children>
+            </HBox>
+            
+            
+            <ChoiceBox prefHeight="39.0" prefWidth="165.0">
+               <HBox.margin>
+                  <Insets right="80.0" />
+               </HBox.margin>
+               <items>
+               		<FXCollections fx:factory="observableArrayList">
+               			<String fx:value="Small" />
+               			<String fx:value="Medium" />
+               			<String fx:value="Large" />               			
+               		</FXCollections>
+               </items>
+            </ChoiceBox>
+            
+            
+            <ChoiceBox layoutX="10.0" layoutY="10.0" prefWidth="150.0">
+               <HBox.margin>
+                  <Insets right="80.0" />
+               </HBox.margin>
+               <items>
+               		<FXCollections fx:factory="observableArrayList">
+               			<String fx:value="Small" />
+               			<String fx:value="Medium" />
+               			<String fx:value="Large" />               			
+               		</FXCollections>
+               </items>
+            </ChoiceBox>
+            
+            
+           <ChoiceBox layoutX="10.0" layoutY="10.0" prefWidth="150.0">
+               <HBox.margin>
+                  <Insets right="80.0" />
+               </HBox.margin>
+               <items>
+               		<FXCollections fx:factory="observableArrayList">
+               			<String fx:value="Small" />
+               			<String fx:value="Medium" />
+               			<String fx:value="Large" />               			
+               		</FXCollections>
+               </items>
+            </ChoiceBox>
+         </children>
+      </HBox>
+      <HBox prefHeight="67.0" prefWidth="886.0">
+         <children>
+            <Label prefHeight="27.0" prefWidth="185.0" text="Choose A Quantity">
+               <HBox.margin>
+                  <Insets right="15.0" />
+               </HBox.margin>
+            </Label>
+            <TextField fx:id="labyrinthTexrfield" prefHeight="39.0" prefWidth="166.0">
+               <HBox.margin>
+                  <Insets right="80.0" />
+               </HBox.margin>
+            </TextField>
+            <TextField fx:id="vigorTextfield" layoutX="206.0" layoutY="10.0" prefHeight="39.0" prefWidth="150.0">
+               <HBox.margin>
+                  <Insets right="80.0" />
+               </HBox.margin>
+            </TextField>
+            <TextField fx:id="pearlTextfield" layoutX="430.0" layoutY="10.0" prefHeight="39.0" prefWidth="147.0" />
+         </children>
+      </HBox>
+      <HBox prefHeight="117.0" prefWidth="531.0">
+         <children>
+            <Label text="Will add pics" />
+         </children>
+      </HBox>
+      <HBox layoutX="10.0" layoutY="137.0" prefHeight="27.0" prefWidth="1008.0">
+         <children>
+            <Label prefHeight="27.0" prefWidth="253.0" text="Geo Printed Duster Cardigan">
+               <HBox.margin>
+                  <Insets left="100.0" />
+               </HBox.margin></Label>
+            <Label layoutX="10.0" layoutY="10.0" prefHeight="27.0" prefWidth="338.0" text="Shereen Wrap Front Satin Maxi Dress" />
+            <Label layoutX="52.0" layoutY="10.0" prefHeight="27.0" prefWidth="338.0" text="Leyana Matching Dress and Jacket Set" />
+         </children>
+      </HBox>
+      <HBox layoutX="10.0" layoutY="171.0" prefHeight="25.0" prefWidth="954.0">
+         <children>
+            <Label fx:id="cardiganPrice" prefHeight="27.0" prefWidth="244.0" text="117.00 $">
+               <HBox.margin>
+                  <Insets left="200.0" />
+               </HBox.margin>
+            </Label>
+            <Label fx:id="dressPrice" prefHeight="27.0" prefWidth="244.0" text="209.00 $" />
+            <Label fx:id="setPrice" prefHeight="27.0" prefWidth="244.0" text="209.00 $" />
+         </children>
+      </HBox>
+      <HBox prefHeight="41.0" prefWidth="847.0">
+         <children>
+            <HBox prefHeight="100.0" prefWidth="193.0">
+               <children>
+                  <Label prefHeight="27.0" prefWidth="252.0" text="Choose A Size" />
+               </children>
+            </HBox>
+            
+            <ChoiceBox layoutX="10.0" layoutY="10.0" prefWidth="150.0">
+               <HBox.margin>
+                  <Insets right="80.0" />
+               </HBox.margin>
+               <items>
+               		<FXCollections fx:factory="observableArrayList">
+               			<String fx:value="Small" />
+               			<String fx:value="Medium" />
+               			<String fx:value="Large" />               			
+               		</FXCollections>
+               </items>
+            </ChoiceBox>
+            
+            
+            <ChoiceBox layoutX="10.0" layoutY="10.0" prefWidth="150.0">
+               <HBox.margin>
+                  <Insets right="80.0" />
+               </HBox.margin>
+               <items>
+               		<FXCollections fx:factory="observableArrayList">
+               			<String fx:value="Small" />
+               			<String fx:value="Medium" />
+               			<String fx:value="Large" />               			
+               		</FXCollections>
+               </items>
+            </ChoiceBox>
+            
+            
+            <ChoiceBox layoutX="10.0" layoutY="10.0" prefWidth="150.0">
+               <HBox.margin>
+                  <Insets right="80.0" />
+               </HBox.margin>
+               <items>
+               		<FXCollections fx:factory="observableArrayList">
+               			<String fx:value="Small" />
+               			<String fx:value="Medium" />
+               			<String fx:value="Large" />               			
+               		</FXCollections>
+               </items>
+            </ChoiceBox>
+         </children>
+      </HBox>
+      <HBox layoutX="10.0" layoutY="192.0" prefHeight="62.0" prefWidth="997.0">
+         <children>
+            <Label prefHeight="27.0" prefWidth="187.0" text="Choose A Quantity">
+               <HBox.margin>
+                  <Insets right="15.0" />
+               </HBox.margin>
+            </Label>
+            <TextField fx:id="travellerTextField" prefHeight="39.0" prefWidth="166.0">
+               <HBox.margin>
+                  <Insets right="80.0" />
+               </HBox.margin>
+            </TextField>
+            <TextField fx:id="fahadTextfield" layoutX="206.0" layoutY="10.0" prefHeight="39.0" prefWidth="150.0">
+               <HBox.margin>
+                  <Insets right="80.0" />
+               </HBox.margin>
+            </TextField>
+            <TextField fx:id="talismanTextfield" layoutX="430.0" layoutY="10.0" prefHeight="39.0" prefWidth="164.0">
+               <HBox.margin>
+                  <Insets left="20.0" />
+               </HBox.margin>
+            </TextField>
+         </children>
+         <VBox.margin>
+            <Insets top="10.0" />
+         </VBox.margin>
+      </HBox>
+      <Button mnemonicParsing="false" onAction="#switchToMainScene" text="Back to main window ">
+         <VBox.margin>
+            <Insets left="325.0" top="50.0" />
+         </VBox.margin>
+      </Button>
+      <HBox prefHeight="100.0" prefWidth="200.0" />
    </children>
 </VBox>
