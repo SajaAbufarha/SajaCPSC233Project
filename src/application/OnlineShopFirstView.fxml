@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox prefHeight="650.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.OnlineShopController">
+   <children>
+      <Label text="Modest Clothing Shop" />
+      <HBox prefHeight="350.0" prefWidth="1000.0">
+         <children>
+            <Button fx:id="menButton" mnemonicParsing="false" onAction="#men" prefHeight="0.0" prefWidth="231.0" text="Shop Men" />
+            <Button fx:id="womenButton" mnemonicParsing="false" onAction="#women" prefHeight="0.0" prefWidth="231.0" text="Shop Women" />
+         </children></HBox>
+      <Button fx:id="checkoutButton" mnemonicParsing="false" onAction="#checkout" prefHeight="0.0" prefWidth="231.0" text="Checkout" />
+   </children>
+</VBox>
