@@ -7,7 +7,6 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
-import javafx.scene.layout.VBox;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
@@ -19,6 +18,35 @@ public class OnlineShopController {
 	private Scene scene;
 	private Parent root;
 
+	@FXML
+	private Label womenTotaldisplay;
+	@FXML
+	private TextField cardiganTextField;
+	@FXML
+	private Label topPrice;
+	@FXML
+	private TextField geoPantsTextfield;
+	@FXML
+	private TextField pantsTextField;
+	@FXML
+	private Label setPrice;
+	@FXML
+	private TextField setTextfield;
+	@FXML
+	private Label pantsPrice;
+	@FXML
+	private Label cardiganPrice;
+	@FXML
+	private Label dressPrice;
+	@FXML
+	private TextField dressTextfield;
+	@FXML
+	private Label geoPantsPrice;
+	@FXML
+	private TextField topTextfield;
+
+	@FXML
+	private Label womenErrorLabel;
 	@FXML
 	private TextField labyrinthTextfield;
 	@FXML
@@ -45,7 +73,6 @@ public class OnlineShopController {
 	private TextField pearlTextfield;
 	@FXML
 	private Label labyrinthPrice;
-
 	@FXML
 	private Button checkoutButton;
 	@FXML
@@ -57,7 +84,8 @@ public class OnlineShopController {
 	@FXML
 	private Label errorLabel;
 	@FXML
-    private Label totaldisplay;
+	private Label totaldisplay;
+
 	public void switchToMainScene(ActionEvent event) throws IOException {
 		root = FXMLLoader.load(getClass().getResource("OnlineShopFirstView.fxml"));
 		stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -95,18 +123,41 @@ public class OnlineShopController {
 	}
 
 	@FXML
-    void addItems(ActionEvent event) {
+	void addItems(ActionEvent event) {
+		MenSectionTotal men = new MenSectionTotal(labyrinthTextfield.getText(), fahadTextfield.getText(),
+				travellerTextField.getText(), talismanTextfield.getText(), vigorTextfield.getText(),
+				pearlTextfield.getText(), Double.parseDouble(labyrinthPrice.getText()),
+				Double.parseDouble(fahadPrice.getText()), Double.parseDouble(travellerPrice.getText()),
+				Double.parseDouble(talismanPrice.getText()), Double.parseDouble(vigorPrice.getText()),
+				Double.parseDouble(pearlPrice.getText()));
 
-    	MenSectionTotal men = new MenSectionTotal(labyrinthTextfield.getText(), fahadTextfield.getText(), travellerTextField.getText()
-    	, talismanTextfield.getText(), vigorTextfield.getText(), pearlTextfield.getText()
-    	, Double.parseDouble(labyrinthPrice.getText()), Double.parseDouble(fahadPrice.getText()),Double.parseDouble(travellerPrice.getText())
-    	,Double.parseDouble(talismanPrice.getText()), Double.parseDouble(vigorPrice.getText()),Double.parseDouble(pearlPrice.getText()));
-    	
-    	men.setErrorMessageMen();
-    	totaldisplay.setText(String.format("Your total for the men section is %.02f", men.getTotalMen()));
-    	errorLabel.setText(men.getErrorMessageMen());
+		men.setErrorMessageMen();
+		totaldisplay.setText(String.format("Your total for the men section is %.02f", men.getTotalMen()));
+		errorLabel.setText(men.getErrorMessageMen());
+	}
 
+	@FXML
+	void womenAddItems(ActionEvent event) {
+
+		WomenSectionTotal women = new WomenSectionTotal(cardiganTextField.getText(), topTextfield.getText(),
+				dressTextfield.getText(), setTextfield.getText(), pantsTextField.getText(), geoPantsTextfield.getText(),
+				Double.parseDouble(setPrice.getText()), Double.parseDouble(geoPantsPrice.getText()),
+				Double.parseDouble(pantsPrice.getText()), Double.parseDouble(topPrice.getText()),
+				Double.parseDouble(dressPrice.getText()), Double.parseDouble(cardiganPrice.getText()));
+
+		women.setErrorMessageWomen();
+		womenTotaldisplay.setText(String.format("Your total for the women section is %.02f", women.getTotalMen()));
+		womenErrorLabel.setText(women.getErrorMessageWomen());
+	}
+
+    @FXML
+    void confirm(ActionEvent event) throws IOException {
+    	Parent root = FXMLLoader.load(getClass().getResource("ConfirmationScene.fxml"));
+		stage = (Stage) ( (Node) event.getSource()).getScene().getWindow();
+		scene = new Scene(root);
+		stage.setScene(scene);
+		stage.show();
     }
-	
-	
+
+    
 }
