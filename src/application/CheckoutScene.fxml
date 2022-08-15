@@ -5,18 +5,20 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox prefHeight="650.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.OnlineShopController">
+<VBox prefHeight="800.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.OnlineShopController">
    <children>
       <Label prefHeight="83.0" prefWidth="145.0" text="Checkout Page " />
       <Label prefHeight="27.0" prefWidth="575.0" text="Please enter your information and confirm your order" />
-      <Label prefHeight="68.0" prefWidth="146.0" text="First Name:" />
-      <TextArea fx:id="firstName" prefHeight="44.0" prefWidth="1000.0" />
-      <Label prefHeight="60.0" prefWidth="146.0" text="Last Name:" />
-      <TextArea fx:id="lastName" prefHeight="44.0" prefWidth="1000.0" />
+      <Label prefHeight="68.0" prefWidth="146.0" text="Full Name:" />
+      <TextField fx:id="fullName" />
+      <Label prefHeight="60.0" prefWidth="146.0" text="Card Number" />
+      <TextField />
+      <Label prefHeight="60.0" prefWidth="146.0" text="CVV" />
+      <TextField />
       <Label prefHeight="67.0" prefWidth="146.0" text="Postal code:" />
-      <TextArea fx:id="postalCode" prefHeight="44.0" prefWidth="613.0" />
+      <TextField fx:id="postalCode" />
       <Label prefHeight="69.0" prefWidth="146.0" text="Email:" />
-      <TextArea fx:id="email" prefHeight="44.0" prefWidth="523.0" />
+      <TextField fx:id="email" />
       <Button mnemonicParsing="false" onAction="#confirm" text="Confirm and checkout" />
    </children>
 </VBox>

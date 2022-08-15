@@ -16,6 +16,7 @@
             <Insets left="325.0" />
          </VBox.margin>
       </Label>
+      <Label prefHeight="27.0" prefWidth="633.0" text="20% Off for orders above 200$ ! And 30% off for orders above 300$ !!" />
       <HBox layoutX="10.0" layoutY="292.0" prefHeight="127.0" prefWidth="531.0">
          <children>
             <Label text="Will add pics">
