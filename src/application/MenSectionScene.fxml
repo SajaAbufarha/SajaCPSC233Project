@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.collections.FXCollections?>
 
-<VBox fillWidth="false" prefHeight="700.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.OnlineShopController">
+<VBox fillWidth="false" prefHeight="800.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.OnlineShopController">
    <children>
       <Label prefHeight="27.0" prefWidth="315.0" text="Men's Collection" textFill="#0a0a7c">
          <VBox.margin>
@@ -28,11 +28,6 @@
          <font>
             <Font name="Footlight MT Light" size="24.0" />
          </font></Label>
-      <HBox layoutX="10.0" layoutY="292.0" prefHeight="106.0" prefWidth="1100.0">
-         <VBox.margin>
-            <Insets />
-         </VBox.margin>
-      </HBox>
       <HBox prefHeight="27.0" prefWidth="1098.0">
          <children>
             <HBox prefHeight="100.0" prefWidth="200.0" />
@@ -96,7 +91,7 @@
             </HBox>
             
             
-            <ChoiceBox prefHeight="39.0" prefWidth="165.0">
+            <ChoiceBox prefWidth="165.0">
                <HBox.margin>
                   <Insets left="100.0" right="80.0" />
                </HBox.margin>
@@ -191,7 +186,6 @@
             <TextField fx:id="pearlTextfield" layoutX="430.0" layoutY="10.0" prefHeight="39.0" prefWidth="147.0" />
          </children>
       </HBox>
-      <HBox prefHeight="92.0" prefWidth="1052.0" />
       <HBox layoutX="10.0" layoutY="137.0" prefHeight="35.0" prefWidth="1090.0">
          <children>
             <HBox prefHeight="29.0" prefWidth="204.0" />
@@ -378,7 +372,7 @@
             </Lighting>
          </effect>
       </Button>
-      <Label fx:id="errorLabel" prefHeight="62.0" prefWidth="746.0" textFill="#0a0a7c">
+      <Label fx:id="errorLabel" prefHeight="45.0" prefWidth="746.0" textFill="#0a0a7c">
          <font>
             <Font size="24.0" />
          </font></Label>

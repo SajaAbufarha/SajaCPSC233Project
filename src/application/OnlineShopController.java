@@ -87,8 +87,10 @@ public class OnlineShopController {
 	private Label totaldisplay;
 	@FXML
 	private Label confirm;
+
 	/**
 	 * Switches the scene to the main page
+	 * 
 	 * @param event
 	 * @throws IOException
 	 */
@@ -99,11 +101,13 @@ public class OnlineShopController {
 		stage.setScene(scene);
 		stage.show();
 	}
-/** 
- * Switches the scene to the men section page
- * @param event
- * @throws IOException
- */
+
+	/**
+	 * Switches the scene to the men section page
+	 * 
+	 * @param event
+	 * @throws IOException
+	 */
 	@FXML
 	void men(ActionEvent event) throws IOException {
 		Parent root = FXMLLoader.load(getClass().getResource("MenSectionScene.fxml"));
@@ -113,8 +117,10 @@ public class OnlineShopController {
 		stage.show();
 
 	}
+
 	/**
 	 * Switches the scene to the women section page
+	 * 
 	 * @param event
 	 * @throws IOException
 	 */
@@ -129,9 +135,9 @@ public class OnlineShopController {
 	}
 
 	/**
-	 * Creates an instance of the MenSectionTotal class, passes values of quantities (TextFields) and prices
-	 * Shows error message, if there is
-	 * Displays the total 
+	 * Creates an instance of the MenSectionTotal class, passes values of quantities
+	 * (TextFields) and prices Shows error message, if there is Displays the total
+	 * 
 	 * @param event
 	 */
 	@FXML
@@ -147,10 +153,12 @@ public class OnlineShopController {
 		totaldisplay.setText(String.format("Your total for the men section is %.02f", men.getTotalMen()));
 		errorLabel.setText(men.getErrorMessageMen());
 	}
+
 	/**
-	 * Creates an instance of the WomenSectionTotal class, passes values of quantities (TextFields) and prices
-	 * Shows error message, if there is
-	 * Displays the total
+	 * Creates an instance of the WomenSectionTotal class, passes values of
+	 * quantities (TextFields) and prices Shows error message, if there is Displays
+	 * the total
+	 * 
 	 * @param event
 	 */
 
@@ -167,8 +175,10 @@ public class OnlineShopController {
 		womenTotaldisplay.setText(String.format("Your total for the women section is %.02f", women.getTotalWomen()));
 		womenErrorLabel.setText(women.getErrorMessageWomen());
 	}
+
 	/**
 	 * Switches the scene to the checkout page
+	 * 
 	 * @param event
 	 * @throws IOException
 	 */
@@ -180,8 +190,10 @@ public class OnlineShopController {
 		stage.setScene(scene);
 		stage.show();
 	}
+
 	/**
-	 * Switches the scene to the checkout page
+	 * Switches the scene to the confirmation page
+	 * 
 	 * @param event
 	 * @throws IOException
 	 */

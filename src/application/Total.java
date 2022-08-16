@@ -6,9 +6,12 @@ public class Total {
 	private double price;
 	private String errorMessage;
 
-	Total(){}
+	Total() {
+	}
+
 	/**
 	 * Constructor to set the values for quantities and prices
+	 * 
 	 * @param price
 	 * @param quantityAsString
 	 */
@@ -16,8 +19,10 @@ public class Total {
 		this.price = price;
 		setQuantityString(quantityAsString);
 	}
+
 	/**
 	 * Validates quantity entered, quantity should be a positive digit
+	 * 
 	 * @param quantityAsString
 	 * @return valid (boolean value)
 	 */
@@ -26,10 +31,10 @@ public class Total {
 		// If the user leaves the Textfield empty
 		if (quantityAsString == "") {
 			valid = false;
-		// Checks if quantity is positive 
+			// Checks if quantity is positive
 		} else if (quantityAsString.charAt(0) == '-') {
 			valid = false;
-		// Checks if quantity is a digit
+			// Checks if quantity is a digit
 		} else {
 			for (char c : quantityAsString.toCharArray()) {
 				if (!Character.isDigit(c) && c != '-') {
@@ -43,13 +48,16 @@ public class Total {
 
 	/**
 	 * Calculates the total for each item
+	 * 
 	 * @return total = price * quantity
 	 */
 	double itemTotal() {
 		return getPrice() * getQuantity();
 	}
+
 	/**
 	 * Returns the double format of the quantity once it passes all validation tests
+	 * 
 	 * @return quantity
 	 */
 	double getQuantity() {
@@ -60,7 +68,8 @@ public class Total {
 		}
 		return quantity;
 	}
-	//Getters and setters
+
+	// Getters and setters
 	void setQuantity(double quantity) {
 		this.quantity = quantity;
 	}
@@ -76,8 +85,10 @@ public class Total {
 	String getErrorMessage() {
 		return errorMessage;
 	}
-	/** 
+
+	/**
 	 * Checks the validation of the quantities and sets the errorMessage
+	 * 
 	 * @param item1
 	 * @param item2
 	 * @param item3
