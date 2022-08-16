@@ -1,15 +1,12 @@
 package application;
 
 import java.io.IOException;
-import java.util.ArrayList;
-
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
-import javafx.scene.layout.HBox;
-import javafx.scene.layout.VBox;
+import javafx.scene.image.ImageView;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
@@ -89,13 +86,7 @@ public class OnlineShopController {
 	@FXML
 	private Label totaldisplay;
 	@FXML
-    private Label confirm;
-    @FXML
-    private TextField postalCode;
-    @FXML
-    private TextField fullName;
-    @FXML
-    private TextField email;
+	private Label confirm;
 
 	public void switchToMainScene(ActionEvent event) throws IOException {
 		root = FXMLLoader.load(getClass().getResource("OnlineShopFirstView.fxml"));
@@ -131,7 +122,7 @@ public class OnlineShopController {
 				pearlTextfield.getText(), Double.parseDouble(labyrinthPrice.getText()),
 				Double.parseDouble(fahadPrice.getText()), Double.parseDouble(travellerPrice.getText()),
 				Double.parseDouble(talismanPrice.getText()), Double.parseDouble(vigorPrice.getText()),
-				Double.parseDouble(pearlPrice.getText()) );
+				Double.parseDouble(pearlPrice.getText()));
 
 		men.setErrorMessageMen();
 		totaldisplay.setText(String.format("Your total for the men section is %.02f", men.getTotalMen()));
@@ -151,32 +142,23 @@ public class OnlineShopController {
 		womenTotaldisplay.setText(String.format("Your total for the women section is %.02f", women.getTotalWomen()));
 		womenErrorLabel.setText(women.getErrorMessageWomen());
 	}
-	
+
 	@FXML
 	void checkout(ActionEvent event) throws IOException {
 		Parent root = FXMLLoader.load(getClass().getResource("CheckoutScene.fxml"));
 		stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
 		scene = new Scene(root);
 		stage.setScene(scene);
-		stage.show();		
-	} 
-	
+		stage.show();
+	}
+
 	@FXML
-    void displayTotal(ActionEvent event) {
-		
-    }
-	
-	
-    @FXML
-    void confirm(ActionEvent event) throws IOException {
-    	Parent root = FXMLLoader.load(getClass().getResource("ConfirmationScene.fxml"));
-		stage = (Stage) ( (Node) event.getSource()).getScene().getWindow();
+	void confirm(ActionEvent event) throws IOException {
+		Parent root = FXMLLoader.load(getClass().getResource("ConfirmationScene.fxml"));
+		stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
 		scene = new Scene(root);
 		stage.setScene(scene);
 		stage.show();
-    }
+	}
 
-	
-
-    
 }

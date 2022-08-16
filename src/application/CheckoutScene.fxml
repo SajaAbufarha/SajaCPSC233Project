@@ -1,24 +1,67 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.effect.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
 <?import javafx.scene.control.*?>
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox prefHeight="800.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.OnlineShopController">
+<VBox prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.OnlineShopController">
    <children>
-      <Label prefHeight="83.0" prefWidth="145.0" text="Checkout Page " />
-      <Label prefHeight="27.0" prefWidth="575.0" text="Please enter your information and confirm your order" />
-      <Label prefHeight="68.0" prefWidth="146.0" text="Full Name:" />
-      <TextField fx:id="fullName" />
-      <Label prefHeight="60.0" prefWidth="146.0" text="Card Number" />
+      <Label prefHeight="83.0" prefWidth="265.0" text="Checkout Page " textFill="#16501e">
+         <font>
+            <Font name="French Script MT" size="54.0" />
+         </font>
+         <VBox.margin>
+            <Insets left="350.0" />
+         </VBox.margin></Label>
+      <Label prefHeight="27.0" prefWidth="575.0" text="Please enter your information and confirm your order" textFill="#0a0a7c">
+         <font>
+            <Font size="24.0" />
+         </font></Label>
+      <Label prefHeight="68.0" prefWidth="146.0" text="Full Name:" textFill="#0a0a7c">
+         <font>
+            <Font size="24.0" />
+         </font></Label>
       <TextField />
-      <Label prefHeight="60.0" prefWidth="146.0" text="CVV" />
+      <Label prefHeight="60.0" prefWidth="146.0" text="Card Number" textFill="#0a0a7c">
+         <font>
+            <Font size="24.0" />
+         </font></Label>
       <TextField />
-      <Label prefHeight="67.0" prefWidth="146.0" text="Postal code:" />
-      <TextField fx:id="postalCode" />
-      <Label prefHeight="69.0" prefWidth="146.0" text="Email:" />
-      <TextField fx:id="email" />
-      <Button mnemonicParsing="false" onAction="#confirm" text="Confirm and checkout" />
+      <Label prefHeight="60.0" prefWidth="146.0" text="CVV" textFill="#0a0a7c">
+         <font>
+            <Font size="24.0" />
+         </font></Label>
+      <TextField />
+      <Label prefHeight="67.0" prefWidth="146.0" text="Postal code:" textFill="#0a0a7c">
+         <font>
+            <Font size="24.0" />
+         </font></Label>
+      <TextField />
+      <Label prefHeight="69.0" prefWidth="146.0" text="Email:" textFill="#0a0a7c">
+         <font>
+            <Font size="24.0" />
+         </font></Label>
+      <TextField />
+      <Button mnemonicParsing="false" onAction="#confirm" text="Confirm and checkout" textFill="#16501e">
+         <font>
+            <Font name="Footlight MT Light" size="28.0" />
+         </font>
+         <effect>
+            <Lighting>
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant color="#cbfcd1" />
+               </light>
+            </Lighting>
+         </effect>
+         <VBox.margin>
+            <Insets left="340.0" top="60.0" />
+         </VBox.margin></Button>
    </children>
 </VBox>

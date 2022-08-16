@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
 <?import javafx.geometry.*?>
 <?import javafx.scene.image.*?>
 <?import java.lang.*?>
@@ -9,12 +14,72 @@
 
 <VBox prefHeight="650.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.OnlineShopController">
    <children>
-      <Label text="Modest Clothing Shop" />
+      <Label contentDisplay="TOP" text="Welcom to My Clothing Shop" textAlignment="CENTER" textFill="#0a0a7c" textOverrun="LEADING_WORD_ELLIPSIS">
+         <VBox.margin>
+            <Insets left="260.0" />
+         </VBox.margin>
+         <font>
+            <Font size="36.0" />
+         </font></Label>
       <HBox prefHeight="350.0" prefWidth="1000.0">
          <children>
-            <Button fx:id="menButton" mnemonicParsing="false" onAction="#men" prefHeight="0.0" prefWidth="231.0" text="Shop Men" />
-            <Button fx:id="womenButton" mnemonicParsing="false" onAction="#women" prefHeight="0.0" prefWidth="231.0" text="Shop Women" />
-         </children></HBox>
-      <Button fx:id="checkoutButton" mnemonicParsing="false" onAction="#checkout" prefHeight="0.0" prefWidth="231.0" text="Checkout" />
+            <Button fx:id="menButton" mnemonicParsing="false" onAction="#men" prefHeight="0.0" prefWidth="231.0" text="Shop Men" textFill="#0b0b7a" textOverrun="CLIP">
+               <HBox.margin>
+                  <Insets left="130.0" />
+               </HBox.margin>
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+               <effect>
+                  <Lighting>
+                     <bumpInput>
+                        <Shadow />
+                     </bumpInput>
+                     <light>
+                        <Light.Distant color="#e6ffc0" />
+                     </light>
+                  </Lighting>
+               </effect>
+               <font>
+                  <Font size="24.0" />
+               </font></Button>
+            <Button fx:id="womenButton" mnemonicParsing="false" onAction="#women" prefHeight="0.0" prefWidth="231.0" text="Shop Women" textFill="#0a0a7c">
+               <HBox.margin>
+                  <Insets left="250.0" />
+               </HBox.margin>
+               <font>
+                  <Font size="24.0" />
+               </font>
+               <effect>
+                  <Lighting>
+                     <bumpInput>
+                        <Shadow />
+                     </bumpInput>
+                     <light>
+                        <Light.Distant color="#ffcbf9" />
+                     </light>
+                  </Lighting>
+               </effect></Button>
+         </children>
+         <VBox.margin>
+            <Insets top="50.0" />
+         </VBox.margin></HBox>
+      <Button fx:id="checkoutButton" mnemonicParsing="false" onAction="#checkout" prefHeight="0.0" prefWidth="231.0" text="Checkout" textFill="#0a0a7c">
+         <VBox.margin>
+            <Insets left="330.0" />
+         </VBox.margin>
+         <font>
+            <Font size="24.0" />
+         </font>
+         <effect>
+            <Lighting>
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant color="#bfecff" />
+               </light>
+            </Lighting>
+         </effect></Button>
    </children>
 </VBox>

@@ -2,59 +2,69 @@ package application;
 
 public class WomenSectionTotal extends Total{
 
-	String cardiganQuantity, topQuantity, dressQuantity, setQuantity, pantsQuantity, geoPantsQuantity;
-	double setPrice,  geoPantsPrice,  pantsPrice, topPrice,  dressPrice,  cardiganPrice;
+	private String cardiganQuantity;
+	private String topQuantity;
+	private String dressQuantity;
+	private String setQuantity;
+	private String pantsQuantity;
+	private String geoPantsQuantity;
+	private double setPrice;
+	private double geoPantsPrice;
+	private double pantsPrice;
+	private double topPrice;
+	private double dressPrice;
+	private double cardiganPrice;
 	private String errorMessageMen;
 	
 	WomenSectionTotal(String cardiganQuantity, String topQuantity,String dressQuantity
 			, String setQuantity, String pantsQuantity, String geoPantsQuantity
 	    	, double setPrice, double geoPantsPrice, double pantsPrice
 	    	, double topPrice , double dressPrice, double cardiganPrice) {
-		this.cardiganQuantity = cardiganQuantity;
-		this.cardiganPrice = cardiganPrice;
+		this.setCardiganQuantity(cardiganQuantity);
+		this.setCardiganPrice(cardiganPrice);
 		
-		this.topQuantity = topQuantity;
-		this.topPrice = topPrice;
+		this.setTopQuantity(topQuantity);
+		this.setTopPrice(topPrice);
 		
-		this.dressQuantity=dressQuantity;
-		this.dressPrice= dressPrice;
+		this.setDressQuantity(dressQuantity);
+		this.setDressPrice(dressPrice);
 		
-		this.setQuantity =setQuantity;
-		this.setPrice = setPrice;
+		this.setSetQuantity(setQuantity);
+		this.setSetPrice(setPrice);
 		
-		this.pantsQuantity=pantsQuantity;
-		this.pantsPrice=pantsPrice;
+		this.setPantsQuantity(pantsQuantity);
+		this.setPantsPrice(pantsPrice);
 		
-		this.geoPantsQuantity=geoPantsQuantity;
-		this.geoPantsPrice=geoPantsPrice;
+		this.setGeoPantsQuantity(geoPantsQuantity);
+		this.setGeoPantsPrice(geoPantsPrice);
 		
 		setErrorMessage(cardiganQuantity, topQuantity, dressQuantity, setQuantity, pantsQuantity, geoPantsQuantity);
 	}
 	
 	double getTotalWomen() {
 		double totalWomen = 0;
-		setQuantityString(cardiganQuantity);
-		setPrice(cardiganPrice);
+		setQuantityString(getCardiganQuantity());
+		setPrice(getCardiganPrice());
 		totalWomen+= itemTotal();
 		
-		setQuantityString(topQuantity);
-		setPrice(topPrice);
+		setQuantityString(getTopQuantity());
+		setPrice(getTopPrice());
 		totalWomen+= itemTotal();
 
-		setQuantityString(dressQuantity);
-		setPrice(dressPrice);
+		setQuantityString(getDressQuantity());
+		setPrice(getDressPrice());
 		totalWomen+= itemTotal();
 		
-		setQuantityString(setQuantity);
-		setPrice(setPrice);
+		setQuantityString(getSetQuantity());
+		setPrice(getSetPrice());
 		totalWomen+= itemTotal();
 		
-		setQuantityString(pantsQuantity);
-		setPrice(pantsPrice);
+		setQuantityString(getPantsQuantity());
+		setPrice(getPantsPrice());
 		totalWomen+= itemTotal();
 		
-		setQuantityString(geoPantsQuantity);
-		setPrice(geoPantsPrice);
+		setQuantityString(getGeoPantsQuantity());
+		setPrice(getGeoPantsPrice());
 		totalWomen+= itemTotal();
 		if (totalWomen>= 200 && totalWomen < 300) {
 			totalWomen = totalWomen - (totalWomen * 0.20);
@@ -71,6 +81,102 @@ public class WomenSectionTotal extends Total{
 	}
 	public void setErrorMessageWomen() {
 		errorMessageMen = getErrorMessage();
+	}
+
+	public String getCardiganQuantity() {
+		return cardiganQuantity;
+	}
+
+	public void setCardiganQuantity(String cardiganQuantity) {
+		this.cardiganQuantity = cardiganQuantity;
+	}
+
+	public String getTopQuantity() {
+		return topQuantity;
+	}
+
+	public void setTopQuantity(String topQuantity) {
+		this.topQuantity = topQuantity;
+	}
+
+	public String getDressQuantity() {
+		return dressQuantity;
+	}
+
+	public void setDressQuantity(String dressQuantity) {
+		this.dressQuantity = dressQuantity;
+	}
+
+	public String getSetQuantity() {
+		return setQuantity;
+	}
+
+	public void setSetQuantity(String setQuantity) {
+		this.setQuantity = setQuantity;
+	}
+
+	public String getPantsQuantity() {
+		return pantsQuantity;
+	}
+
+	public void setPantsQuantity(String pantsQuantity) {
+		this.pantsQuantity = pantsQuantity;
+	}
+
+	public String getGeoPantsQuantity() {
+		return geoPantsQuantity;
+	}
+
+	public void setGeoPantsQuantity(String geoPantsQuantity) {
+		this.geoPantsQuantity = geoPantsQuantity;
+	}
+
+	public double getSetPrice() {
+		return setPrice;
+	}
+
+	public void setSetPrice(double setPrice) {
+		this.setPrice = setPrice;
+	}
+
+	public double getGeoPantsPrice() {
+		return geoPantsPrice;
+	}
+
+	public void setGeoPantsPrice(double geoPantsPrice) {
+		this.geoPantsPrice = geoPantsPrice;
+	}
+
+	public double getPantsPrice() {
+		return pantsPrice;
+	}
+
+	public void setPantsPrice(double pantsPrice) {
+		this.pantsPrice = pantsPrice;
+	}
+
+	public double getTopPrice() {
+		return topPrice;
+	}
+
+	public void setTopPrice(double topPrice) {
+		this.topPrice = topPrice;
+	}
+
+	public double getDressPrice() {
+		return dressPrice;
+	}
+
+	public void setDressPrice(double dressPrice) {
+		this.dressPrice = dressPrice;
+	}
+
+	public double getCardiganPrice() {
+		return cardiganPrice;
+	}
+
+	public void setCardiganPrice(double cardiganPrice) {
+		this.cardiganPrice = cardiganPrice;
 	}
 
 }

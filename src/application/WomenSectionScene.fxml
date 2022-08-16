@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
 <?import javafx.collections.*?>
 <?import javafx.geometry.*?>
 <?import javafx.scene.shape.*?>
@@ -11,20 +13,22 @@
 
 <VBox fillWidth="false" prefHeight="650.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.OnlineShopController">
    <children>
-      <Label prefHeight="27.0" prefWidth="315.0" text="Women's Collection">
+      <Label prefHeight="27.0" prefWidth="315.0" text="Women's Collection" textFill="#851ea4">
          <VBox.margin>
             <Insets left="325.0" />
          </VBox.margin>
+         <font>
+            <Font name="French Script MT" size="48.0" />
+         </font>
       </Label>
-      <Label prefHeight="27.0" prefWidth="633.0" text="20% Off for orders above 200$ ! And 30% off for orders above 300$ !!" />
+      <Label prefHeight="27.0" prefWidth="768.0" text="20% Off for orders above 200$ ! And 30% off for orders above 300$ !!" textFill="#e80d0d">
+         <font>
+            <Font name="Footlight MT Light" size="24.0" />
+         </font>
+         <VBox.margin>
+            <Insets left="130.0" />
+         </VBox.margin></Label>
       <HBox layoutX="10.0" layoutY="292.0" prefHeight="127.0" prefWidth="531.0">
-         <children>
-            <Label text="Will add pics">
-               <HBox.margin>
-                  <Insets top="30.0" />
-               </HBox.margin>
-            </Label>
-         </children>
          <VBox.margin>
             <Insets top="50.0" />
          </VBox.margin>
@@ -32,36 +36,69 @@
       <HBox prefHeight="34.0" prefWidth="957.0">
          <children>
             <HBox prefHeight="100.0" prefWidth="200.0" />
-            <Label prefHeight="27.0" prefWidth="248.0" text="Stella Wide Leg Trousers" />
-            <Label layoutX="10.0" layoutY="10.0" prefHeight="27.0" prefWidth="224.0" text="Stella Wrap Waist Top" />
-            <Label layoutX="52.0" layoutY="10.0" prefHeight="27.0" prefWidth="286.0" text="Geo Printed High Rise Trousers" />
+            <Label prefHeight="27.0" prefWidth="248.0" text="Wide Leg Trousers" textFill="#851ea4">
+               <font>
+                  <Font size="24.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="20.0" />
+               </HBox.margin></Label>
+            <Label layoutX="10.0" layoutY="10.0" prefHeight="27.0" prefWidth="224.0" text="Wrap Waist Top" textFill="#851ea4">
+               <font>
+                  <Font size="24.0" />
+               </font></Label>
+            <Label layoutX="52.0" layoutY="10.0" prefHeight="27.0" prefWidth="286.0" text="High Rise Trousers" textFill="#851ea4">
+               <font>
+                  <Font size="24.0" />
+               </font></Label>
          </children></HBox>
       <HBox prefHeight="32.0" prefWidth="957.0">
          <children>
-            <Label fx:id="pantsPrice" prefHeight="27.0" prefWidth="56.0" text="78.00">
+            <Label fx:id="pantsPrice" prefHeight="35.0" prefWidth="69.0" text="78.00" textFill="#851ea4">
                <HBox.margin>
-                  <Insets left="200.0" />
+                  <Insets left="260.0" />
                </HBox.margin>
+               <font>
+                  <Font size="24.0" />
+               </font>
             </Label>
-            <Label fx:id="pantsPrice1" prefHeight="27.0" prefWidth="194.0" text="\$" />
-            <Label fx:id="topPrice" prefHeight="27.0" prefWidth="52.0" text="91.00 " />
-            <Label fx:id="pantsPrice11" prefHeight="27.0" prefWidth="148.0" text="\$" />
-            <Label fx:id="geoPantsPrice" prefHeight="27.0" prefWidth="71.0" text="112.00 " />
-            <Label fx:id="pantsPrice12" prefHeight="27.0" prefWidth="111.0" text="\$" />
+            <Label fx:id="pantsPrice1" prefHeight="27.0" prefWidth="194.0" text="\$" textFill="#851ea4">
+               <font>
+                  <Font size="24.0" />
+               </font></Label>
+            <Label fx:id="topPrice" prefHeight="35.0" prefWidth="67.0" text="91.00 " textFill="#851ea4">
+               <font>
+                  <Font size="24.0" />
+               </font></Label>
+            <Label fx:id="pantsPrice11" prefHeight="27.0" prefWidth="148.0" text="\$" textFill="#851ea4">
+               <font>
+                  <Font size="24.0" />
+               </font></Label>
+            <Label fx:id="geoPantsPrice" prefHeight="35.0" prefWidth="81.0" text="112.00 " textFill="#851ea4">
+               <font>
+                  <Font size="24.0" />
+               </font></Label>
+            <Label fx:id="pantsPrice12" prefHeight="27.0" prefWidth="111.0" text="\$" textFill="#851ea4">
+               <font>
+                  <Font size="24.0" />
+               </font></Label>
          </children>
       </HBox>
-      <HBox prefHeight="54.0" prefWidth="826.0">
+      <HBox prefHeight="39.0" prefWidth="1010.0">
          <children>
             <HBox prefHeight="100.0" prefWidth="201.0">
                <children>
-                  <Label prefHeight="27.0" prefWidth="252.0" text="Choose A Size" />
+                  <Label prefHeight="35.0" prefWidth="239.0" text="Choose A Size" textFill="#851ea4">
+                     <font>
+                        <Font size="24.0" />
+                     </font></Label>
                </children>
             </HBox>
             
             
             <ChoiceBox prefHeight="39.0" prefWidth="165.0">
                <HBox.margin>
-                  <Insets right="80.0" />
+                  <Insets left="30.0" right="80.0" />
                </HBox.margin>
                <items>
                		<FXCollections fx:factory="observableArrayList">
@@ -70,6 +107,16 @@
                			<String fx:value="Large" />               			
                		</FXCollections>
                </items>
+               <effect>
+                  <Lighting>
+                     <bumpInput>
+                        <Shadow />
+                     </bumpInput>
+                     <light>
+                        <Light.Distant color="#eeb8ff" />
+                     </light>
+                  </Lighting>
+               </effect>
             </ChoiceBox>
             
             
@@ -84,6 +131,16 @@
                			<String fx:value="Large" />               			
                		</FXCollections>
                </items>
+               <effect>
+                  <Lighting>
+                     <bumpInput>
+                        <Shadow />
+                     </bumpInput>
+                     <light>
+                        <Light.Distant color="#eeb8ff" />
+                     </light>
+                  </Lighting>
+               </effect>
             </ChoiceBox>
             
             
@@ -98,15 +155,28 @@
                			<String fx:value="Large" />               			
                		</FXCollections>
                </items>
+               <effect>
+                  <Lighting>
+                     <bumpInput>
+                        <Shadow />
+                     </bumpInput>
+                     <light>
+                        <Light.Distant color="#eeb8ff" />
+                     </light>
+                  </Lighting>
+               </effect>
             </ChoiceBox>
          </children>
       </HBox>
-      <HBox prefHeight="67.0" prefWidth="886.0">
+      <HBox prefHeight="39.0" prefWidth="1010.0">
          <children>
-            <Label prefHeight="27.0" prefWidth="185.0" text="Choose A Quantity">
+            <Label prefHeight="35.0" prefWidth="215.0" text="Choose A Quantity" textFill="#851ea4">
                <HBox.margin>
                   <Insets right="15.0" />
                </HBox.margin>
+               <font>
+                  <Font size="24.0" />
+               </font>
             </Label>
             <TextField fx:id="pantsTextField" prefHeight="39.0" prefWidth="166.0">
                <HBox.margin>
@@ -121,46 +191,75 @@
             <TextField fx:id="geoPantsTextfield" layoutX="430.0" layoutY="10.0" prefHeight="39.0" prefWidth="147.0" />
          </children>
       </HBox>
-      <HBox prefHeight="117.0" prefWidth="531.0">
-         <children>
-            <Label text="Will add pics" />
-         </children>
-      </HBox>
+      <HBox prefHeight="414.0" prefWidth="531.0" />
       <HBox layoutX="10.0" layoutY="137.0" prefHeight="27.0" prefWidth="1008.0">
          <children>
-            <Label prefHeight="27.0" prefWidth="253.0" text="Geo Printed Duster Cardigan">
+            <Label prefHeight="27.0" prefWidth="253.0" text="Duster Cardigan" textFill="#851ea4">
                <HBox.margin>
-                  <Insets left="100.0" />
-               </HBox.margin></Label>
-            <Label layoutX="10.0" layoutY="10.0" prefHeight="27.0" prefWidth="338.0" text="Shereen Wrap Front Satin Maxi Dress" />
-            <Label layoutX="52.0" layoutY="10.0" prefHeight="27.0" prefWidth="338.0" text="Leyana Matching Dress and Jacket Set" />
-         </children>
-      </HBox>
-      <HBox layoutX="10.0" layoutY="171.0" prefHeight="25.0" prefWidth="954.0">
-         <children>
-            <Label fx:id="cardiganPrice" prefHeight="27.0" prefWidth="63.0" text="117.00">
-               <HBox.margin>
-                  <Insets left="200.0" />
+                  <Insets left="210.0" />
                </HBox.margin>
-            </Label>
-            <Label fx:id="pantsPrice13" prefHeight="27.0" prefWidth="194.0" text="\$" />
-            <Label fx:id="dressPrice" prefHeight="27.0" prefWidth="69.0" text="209.00" />
-            <Label fx:id="pantsPrice14" prefHeight="27.0" prefWidth="194.0" text="\$" />
-            <Label fx:id="setPrice" prefHeight="27.0" prefWidth="56.0" text="209.00" />
-            <Label fx:id="pantsPrice15" prefHeight="27.0" prefWidth="194.0" text="\$" />
+               <font>
+                  <Font size="24.0" />
+               </font></Label>
+            <Label layoutX="10.0" layoutY="10.0" prefHeight="35.0" prefWidth="176.0" text="Satin Maxi Dress" textFill="#851ea4">
+               <font>
+                  <Font size="24.0" />
+               </font>
+               <HBox.margin>
+                  <Insets right="30.0" />
+               </HBox.margin></Label>
+            <Label layoutX="52.0" layoutY="10.0" prefHeight="27.0" prefWidth="338.0" text="Matching Dress and Jacket Set" textFill="#851ea4">
+               <font>
+                  <Font size="24.0" />
+               </font></Label>
          </children>
       </HBox>
-      <HBox prefHeight="41.0" prefWidth="847.0">
+      <HBox layoutX="10.0" layoutY="171.0" prefHeight="35.0" prefWidth="1026.0">
          <children>
-            <HBox prefHeight="100.0" prefWidth="193.0">
+            <Label fx:id="cardiganPrice" prefHeight="35.0" prefWidth="99.0" text="117.00" textFill="#851ea4">
+               <HBox.margin>
+                  <Insets left="250.0" />
+               </HBox.margin>
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label fx:id="pantsPrice13" prefHeight="27.0" prefWidth="194.0" text="\$" textFill="#851ea4">
+               <font>
+                  <Font size="24.0" />
+               </font></Label>
+            <Label fx:id="dressPrice" prefHeight="35.0" prefWidth="96.0" text="209.00" textFill="#851ea4">
+               <font>
+                  <Font size="24.0" />
+               </font></Label>
+            <Label fx:id="pantsPrice14" prefHeight="27.0" prefWidth="194.0" text="\$" textFill="#851ea4">
+               <font>
+                  <Font size="24.0" />
+               </font></Label>
+            <Label fx:id="setPrice" prefHeight="35.0" prefWidth="103.0" text="209.00" textFill="#851ea4">
+               <font>
+                  <Font size="24.0" />
+               </font></Label>
+            <Label fx:id="pantsPrice15" prefHeight="27.0" prefWidth="194.0" text="\$" textFill="#851ea4">
+               <font>
+                  <Font size="24.0" />
+               </font></Label>
+         </children>
+      </HBox>
+      <HBox prefHeight="39.0" prefWidth="1092.0">
+         <children>
+            <HBox prefHeight="39.0" prefWidth="200.0">
                <children>
-                  <Label prefHeight="27.0" prefWidth="252.0" text="Choose A Size" />
+                  <Label prefHeight="35.0" prefWidth="170.0" text="Choose A Size" textFill="#851ea4">
+                     <font>
+                        <Font size="24.0" />
+                     </font></Label>
                </children>
             </HBox>
             
-            <ChoiceBox layoutX="10.0" layoutY="10.0" prefWidth="150.0">
+            <ChoiceBox layoutX="10.0" layoutY="10.0" prefHeight="39.0" prefWidth="164.0">
                <HBox.margin>
-                  <Insets right="80.0" />
+                  <Insets left="30.0" right="80.0" />
                </HBox.margin>
                <items>
                		<FXCollections fx:factory="observableArrayList">
@@ -169,12 +268,46 @@
                			<String fx:value="Large" />               			
                		</FXCollections>
                </items>
+               <effect>
+                  <Lighting>
+                     <bumpInput>
+                        <Shadow />
+                     </bumpInput>
+                     <light>
+                        <Light.Distant color="#eeb8ff" />
+                     </light>
+                  </Lighting>
+               </effect>
+            </ChoiceBox>
+            
+            
+            <ChoiceBox layoutX="10.0" layoutY="10.0" prefHeight="39.0" prefWidth="150.0">
+               <HBox.margin>
+                  <Insets left="7.0" right="80.0" />
+               </HBox.margin>
+               <items>
+               		<FXCollections fx:factory="observableArrayList">
+               			<String fx:value="Small" />
+               			<String fx:value="Medium" />
+               			<String fx:value="Large" />               			
+               		</FXCollections>
+               </items>
+               <effect>
+                  <Lighting>
+                     <bumpInput>
+                        <Shadow />
+                     </bumpInput>
+                     <light>
+                        <Light.Distant color="#eeb8ff" />
+                     </light>
+                  </Lighting>
+               </effect>
             </ChoiceBox>
             
             
             <ChoiceBox layoutX="10.0" layoutY="10.0" prefWidth="150.0">
                <HBox.margin>
-                  <Insets right="80.0" />
+                  <Insets left="7.0" right="80.0" />
                </HBox.margin>
                <items>
                		<FXCollections fx:factory="observableArrayList">
@@ -183,33 +316,32 @@
                			<String fx:value="Large" />               			
                		</FXCollections>
                </items>
-            </ChoiceBox>
-            
-            
-            <ChoiceBox layoutX="10.0" layoutY="10.0" prefWidth="150.0">
-               <HBox.margin>
-                  <Insets right="80.0" />
-               </HBox.margin>
-               <items>
-               		<FXCollections fx:factory="observableArrayList">
-               			<String fx:value="Small" />
-               			<String fx:value="Medium" />
-               			<String fx:value="Large" />               			
-               		</FXCollections>
-               </items>
+               <effect>
+                  <Lighting>
+                     <bumpInput>
+                        <Shadow />
+                     </bumpInput>
+                     <light>
+                        <Light.Distant color="#eeb8ff" />
+                     </light>
+                  </Lighting>
+               </effect>
             </ChoiceBox>
          </children>
       </HBox>
       <HBox layoutX="10.0" layoutY="192.0" prefHeight="62.0" prefWidth="997.0">
          <children>
-            <Label prefHeight="27.0" prefWidth="187.0" text="Choose A Quantity">
+            <Label prefHeight="35.0" prefWidth="207.0" text="Choose A Quantity" textFill="#851ea4">
                <HBox.margin>
                   <Insets right="15.0" />
                </HBox.margin>
+               <font>
+                  <Font size="24.0" />
+               </font>
             </Label>
             <TextField fx:id="cardiganTextField" prefHeight="39.0" prefWidth="166.0">
                <HBox.margin>
-                  <Insets right="80.0" />
+                  <Insets left="10.0" right="80.0" />
                </HBox.margin>
             </TextField>
             <TextField fx:id="dressTextfield" layoutX="206.0" layoutY="10.0" prefHeight="39.0" prefWidth="150.0">
@@ -217,9 +349,9 @@
                   <Insets right="80.0" />
                </HBox.margin>
             </TextField>
-            <TextField fx:id="setTextfield" layoutX="430.0" layoutY="10.0" prefHeight="39.0" prefWidth="164.0">
+            <TextField fx:id="setTextfield" layoutX="430.0" layoutY="10.0" prefHeight="39.0" prefWidth="149.0">
                <HBox.margin>
-                  <Insets left="20.0" />
+                  <Insets left="12.0" />
                </HBox.margin>
             </TextField>
          </children>
@@ -227,13 +359,25 @@
             <Insets top="10.0" />
          </VBox.margin>
       </HBox>
-      <Button mnemonicParsing="false" onAction="#switchToMainScene" text="Back to main window ">
+      <Button mnemonicParsing="false" onAction="#switchToMainScene" text="Back to main window " textFill="#851ea4">
          <VBox.margin>
             <Insets left="325.0" top="50.0" />
          </VBox.margin>
+         <font>
+            <Font size="24.0" />
+         </font>
       </Button>
-      <Label fx:id="womenErrorLabel" prefHeight="27.0" prefWidth="503.0" />
-      <Label fx:id="womenTotaldisplay" />
-      <Button fx:id="add" mnemonicParsing="false" onAction="#womenAddItems" text="Add items to the basket" />
+      <Label fx:id="womenErrorLabel" prefHeight="27.0" prefWidth="503.0" textFill="#851ea4">
+         <font>
+            <Font size="24.0" />
+         </font></Label>
+      <Label fx:id="womenTotaldisplay" textFill="#851ea4">
+         <font>
+            <Font size="24.0" />
+         </font></Label>
+      <Button fx:id="add" mnemonicParsing="false" onAction="#womenAddItems" text="Add items to the basket" textFill="#851ea4">
+         <font>
+            <Font size="24.0" />
+         </font></Button>
    </children>
 </VBox>
