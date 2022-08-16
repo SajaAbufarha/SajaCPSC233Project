@@ -1,7 +1,7 @@
 package application;
 
 public class WomenSectionTotal extends Total{
-
+	//Instance variables to set quantities and prices
 	private String cardiganQuantity;
 	private String topQuantity;
 	private String dressQuantity;
@@ -15,7 +15,22 @@ public class WomenSectionTotal extends Total{
 	private double dressPrice;
 	private double cardiganPrice;
 	private String errorMessageMen;
-	
+	/**
+	 * Constructor to set the values for quantities and prices, sets the error message too by
+	 * passing quantity values to the ErrorMessgae setter 
+	 * @param cardiganQuantity
+	 * @param topQuantity
+	 * @param dressQuantity
+	 * @param setQuantity
+	 * @param pantsQuantity
+	 * @param geoPantsQuantity
+	 * @param setPrice
+	 * @param geoPantsPrice
+	 * @param pantsPrice
+	 * @param topPrice
+	 * @param dressPrice
+	 * @param cardiganPrice
+	 */
 	WomenSectionTotal(String cardiganQuantity, String topQuantity,String dressQuantity
 			, String setQuantity, String pantsQuantity, String geoPantsQuantity
 	    	, double setPrice, double geoPantsPrice, double pantsPrice
@@ -40,11 +55,16 @@ public class WomenSectionTotal extends Total{
 		
 		setErrorMessage(cardiganQuantity, topQuantity, dressQuantity, setQuantity, pantsQuantity, geoPantsQuantity);
 	}
-	
+	/** 
+	 * Calculates the total for the men section, applies discount if applicable 
+	 * @return totalWomen
+	 */
 	double getTotalWomen() {
 		double totalWomen = 0;
+		// Passing quantities and prices to methods from the parent class (Total)
 		setQuantityString(getCardiganQuantity());
 		setPrice(getCardiganPrice());
+		// Incrementing totalMen
 		totalWomen+= itemTotal();
 		
 		setQuantityString(getTopQuantity());
@@ -66,6 +86,7 @@ public class WomenSectionTotal extends Total{
 		setQuantityString(getGeoPantsQuantity());
 		setPrice(getGeoPantsPrice());
 		totalWomen+= itemTotal();
+		// Discount calculations, assuming 20% off for orders above 150 and 30% for orders above 250
 		if (totalWomen>= 200 && totalWomen < 300) {
 			totalWomen = totalWomen - (totalWomen * 0.20);
 		}else if (totalWomen >= 300) {
@@ -75,10 +96,11 @@ public class WomenSectionTotal extends Total{
 		}
 		return totalWomen;
 	}
-
+	// Setters and getters
 	public String getErrorMessageWomen() {
 		return errorMessageMen;
 	}
+	// calls getErrorMessage() from the parent class and sets errorMessageMen to it
 	public void setErrorMessageWomen() {
 		errorMessageMen = getErrorMessage();
 	}

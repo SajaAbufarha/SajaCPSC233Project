@@ -1,31 +1,36 @@
 package application;
 
 public class MenSectionTotal extends Total {
+	//Instance variables to set quantities and prices
 	private String labyrinthQuantity;
-
 	private String fahadQuantity;
-
 	private String travellerQuantity;
-
 	private String talismanQuantity;
-
 	private String vigorQuantity;
-
 	private String pearlQuantity;
-
 	private Double labyrinthPrice;
-
 	private Double fahadPrice;
-
 	private Double travellerPrice;
-
 	private Double talismanPrice;
-
 	private Double vigorPrice;
-
 	private Double pearlPrice;
 	private String errorMessageMen;
-
+	/**
+	 * Constructor to set the values for quantities and prices, sets the error message too by
+	 * passing quantity values to the ErrorMessgae setter 
+	 * @param labyrinthQuantity
+	 * @param fahadQuantity
+	 * @param travellerQuantity
+	 * @param talismanQuantity
+	 * @param vigorQuantity
+	 * @param pearlQuantity
+	 * @param labyrinthPrice
+	 * @param fahadPrice
+	 * @param travellerPrice
+	 * @param talismanPrice
+	 * @param vigorPrice
+	 * @param pearlPrice
+	 */
 	MenSectionTotal(String labyrinthQuantity, String fahadQuantity, String travellerQuantity, String talismanQuantity,
 			String vigorQuantity, String pearlQuantity, Double labyrinthPrice, Double fahadPrice, Double travellerPrice,
 			Double talismanPrice, Double vigorPrice, Double pearlPrice) {
@@ -46,10 +51,16 @@ public class MenSectionTotal extends Total {
 				pearlQuantity);
 	}
 
+	/**
+	 * Calculates the total for the men section, applies discount if applicable 
+	 * @return totalMen
+	 */
 	double getTotalMen() {
 		double totalMen = 0;
+		// Passing quantities and prices to methods from the parent class (Total)
 		setQuantityString(getLabyrinthQuantity());
 		setPrice(getLabyrinthPrice());
+		// Incrementing totalMen
 		totalMen += itemTotal();
 
 		setQuantityString(getFahadQuantity());
@@ -71,6 +82,7 @@ public class MenSectionTotal extends Total {
 		setQuantityString(getPearlQuantity());
 		setPrice(getPearlPrice());
 		totalMen += itemTotal();
+		// Discount calculations, assuming 20% off for orders above 150 and 30% for orders above 250
 		if (totalMen >= 150 && totalMen < 250) {
 			totalMen = totalMen - (totalMen * 0.20);
 		} else if (totalMen >= 250) {
@@ -82,10 +94,11 @@ public class MenSectionTotal extends Total {
 		return totalMen;
 	}
 
+	// Setters and getters
 	public String getErrorMessageMen() {
 		return errorMessageMen;
 	}
-
+	// calls getErrorMessage() from the parent class and sets errorMessageMen to it
 	public void setErrorMessageMen() {
 		errorMessageMen = getErrorMessage();
 	}
